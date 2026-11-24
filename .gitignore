@@ -1,0 +1,15 @@
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.pfx
+*.cer
+*.log
+obj/
+dist/
+exe/*.exe
+exe/*.sys
+profile.ini
+backup.ini
+smbios_orig.bin

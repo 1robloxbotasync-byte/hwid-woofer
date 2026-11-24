@@ -1,0 +1,38 @@
+// Console build. Same icon, its own description: a scanner that sees
+// hwidspoof.exe and hwidspoof-cli.exe reporting the same OriginalFilename
+// treats the pair as a dropper.
+#define IDI_APPICON 1
+
+#include "..\shared\version.h"
+
+IDI_APPICON ICON "app.ico"
+
+1 VERSIONINFO
+ FILEVERSION HWID_VERSION_MAJOR,HWID_VERSION_MINOR,HWID_VERSION_PATCH,0
+ PRODUCTVERSION HWID_VERSION_MAJOR,HWID_VERSION_MINOR,HWID_VERSION_PATCH,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", HWID_COMPANY_NAME
+            VALUE "FileDescription", "HWID Spoofer command line"
+            VALUE "FileVersion", HWID_VERSION_STRING
+            VALUE "InternalName", "hwidspoof-cli"
+            VALUE "LegalCopyright", HWID_COPYRIGHT
+            VALUE "OriginalFilename", "hwidspoof-cli.exe"
+            VALUE "ProductName", HWID_PRODUCT_NAME
+            VALUE "ProductVersion", HWID_VERSION_STRING
+            VALUE "Comments", HWID_TAGLINE
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
