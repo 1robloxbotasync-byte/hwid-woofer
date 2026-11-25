@@ -13,3 +13,4 @@ exe/*.sys
 profile.ini
 backup.ini
 smbios_orig.bin
+CLAUDE.md
